@@ -1,0 +1,782 @@
+// Шрифты
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@400;700&family=Playfair+Display:wght@700&family=Roboto&display=swap')
+
+@font-face
+  font-family: 'Lato'
+  src: url('../fonts/Lato-Medium.ttf')
+  font-weight: 500
+
+//
+
+// Обнуление
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+a
+  text-decoration: none
+
+li
+  list-style: none
+
+// Общие
+
+.active
+  &__menu, &__footer
+    color: #FF5722 !important
+
+body
+  font-family: Lato, sans-serif
+  flex-wrap: 400
+
+.wrapper
+  max-width: 1440px
+  margin: 0 auto
+  overflow: hidden
+  &-main
+    max-width: 1110px
+    margin: 0 auto
+
+.container
+  margin: 112px 0 0 0
+
+.title
+  font-family: Lora, sans-serif
+  font-weight: 700
+  color: #10375C
+.subtitle
+  font-weight: 500
+  color: #9A9A9A
+.intro
+  font-weight: 500
+  font-size: 20px
+  line-height: 30px
+  position: relative
+  &::after
+    content: ''
+    top: 16px
+    left: 115px
+    height: 2px
+    width: 73px
+    position: absolute
+    background-color: #222831
+  &-white
+    &::after
+      background-color: #FFFFFF
+.arrows
+  &__item
+    width: 168px
+    height: 26px
+    display: flex
+    justify-content: space-between
+    &-our-space
+      margin: 35px 0 0 0
+    &-gallery
+      margin: 40px 0 0 5px
+    &-reviews
+      margin: 115px 0 0 0
+.link
+  display: flex
+  font-size: 16px
+  font-weight: 400
+  line-height: 26px
+  color: #FF5722
+  width: 150px
+  height: 32px
+  align-items: center
+  img
+    width: 9px
+    margin: 0 0 0 20px
+  &-news
+    margin: 10px 0 0 0
+//
+
+// Секция Hero
+
+.hero
+  padding-top: 61px
+  &__top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    font-weight: 700
+    height: 43px
+    padding-bottom: 56px
+  &__logo
+    font-family: 'Playfair Display', sans-serif
+    font-size: 24px
+    color: #10375C
+  &__menu
+    max-width: 562px
+    margin-left: 90px
+  &__list
+    padding: 5px 0 0 0
+    display: flex
+    justify-content: space-between
+    li
+      margin: 0 0 0 20px
+    a
+      transition: color 0.5s
+      color: #222831
+    a:hover
+      color: #FF5722
+  &__link
+    display: inline-block
+    font-size: 16px
+    color: #222831
+    line-height: 28px
+    white-space: nowrap
+    padding: 0 5px
+  &__btns
+    display: flex
+    a
+      display: inline-block
+      white-space: nowrap
+      padding: 12px 24px
+  &__login
+    color: #FF5722
+  &__signup
+    color: #ffffff
+    background-color: #FF5722
+  &__intro
+    color: #222831
+  &__body
+    display: flex
+    justify-content: space-between
+  &__title
+    font-size: 52px
+    line-height: 67px
+    max-width: 667px
+    span
+      color: #DD2C00
+  &__subtitle
+    font-size: 20px
+    line-height: 30px
+    color: #6A6A6A
+    max-width: 382px
+    margin: 10px 0 0 0
+  &__slider
+    margin: 25px 0 0 0
+    max-width: 1110px
+    max-height: 566px
+    position: relative
+    z-index: 0
+    img
+      width: 100%
+      height: 100%
+.slider
+  &__indicator
+    position: absolute
+    content: ''
+    bottom: 40px
+    height: 4px
+    width: 16px
+    opacity: 0.5
+    background-color: #FFFFFF
+    transition: width 0.5s
+    &-first
+      left: 505px
+    &-second
+      left: 549px
+    &-third
+      left: 569px
+    &-fourth
+      left: 589px
+    &-active
+      background-color: #FF5722
+      width: 40px
+      opacity: 1
+
+//
+
+// секция Our Space
+
+.our-space
+  display: flex
+  flex-direction: column
+  &__top
+    display: flex
+    justify-content: space-between
+  &__title
+    font-size: 40px
+  &__subtitle
+    max-width: 452px
+    font-size: 18px
+    line-height: 28px
+    margin: 0 0 0 50px
+  &__middle
+    margin: 56px 0 0 0
+  &__cards
+    display: flex
+    justify-content: space-between
+  &__bottom
+    margin: 50px 0 0 0
+    align-self: center
+    width: 160px
+    height: 39px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+  &__indicators
+    position: relative
+    width: 160px
+    height: 4px
+  &__indicator
+    position: absolute
+    content: ''
+    top: 0
+    height: 4px
+    width: 40px
+    background: #DFDFDF
+    &-first
+      left: 0
+    &-second
+      left: 40px
+    &-third
+      left: 80px
+    &-fourth
+      left: 120px
+    &-active
+      background: #DD2C00
+  &__counter
+    &-first
+      font-weight: 500
+      font-size: 18px
+      color: #222831
+    &-separation
+      font-family: Roboto, sans-serif
+      font-size: 12px
+      font-weight: 400
+    &-last
+      font-weight: 400
+      color: #9a9a9a
+
+.arrow
+  &-left
+    width: 53px
+    height: 26px
+    background: url("/svg/left-arrow.svg")
+    &:hover
+      background: url("/svg/left-arrow-orange.svg")
+  &-right
+    width: 92px
+    height: 26px
+    background: url("/svg/right-arrow.svg")
+
+.card
+  &__item
+    display: flex
+    flex-direction: column
+    align-items: center
+    height: 468px
+    width: 350px
+    position: relative
+    &-blue
+      background-color: #10375C
+      color: #FFFFFF
+      box-shadow: 0 15px 50px rgba(16, 55, 92, 0.3)
+  &__square
+    position: absolute
+    z-index: 1
+    opacity: 0.2
+    top: 16px
+    right: 16px
+  &__img
+    z-index: 0
+    width: 100%
+  &__btn
+    display: inline-block
+    position: absolute
+    bottom: 49px
+    left: 0px
+    background-color: #FF5722
+    z-index: 1
+    &-square
+      width: 72px
+      aspect-ratio: 1 / 1
+    &-rectangle
+      width: 255px
+      height: 72px
+      bottom: 0px
+    &-right
+      bottom: 48px
+    span
+      color: #FFFFFF
+      font-size: 18px
+      font-weight: 700
+      margin: 0 0 0 50px
+    img
+      margin: 28px 0 0 30px
+  &__caption
+    margin: 25px 0 0 0
+    font-weight: 700
+    font-size: 20px
+    color: #222831
+  &__title
+    margin: 140px 0 0 0
+    font-family: Lora, sans-serif
+    font-weight: 400
+    font-size: 32px
+  &__subtitle
+    margin: 10px 0 0 0
+    font-weight: 500
+    font-size: 18px
+    line-height: 28px
+    max-width: 253px
+    text-align: center
+
+//
+
+// секция Whyfrispes
+
+.whyfrispes
+  display: flex
+  justify-content: space-between
+  &__info
+    margin: 36px 0 0 0
+    max-width: 499px
+    max-height: 353px
+    display: flex
+    flex-wrap: wrap
+    gap: 50px 50px
+  &__item
+    width: 210px
+    height: 75px
+    &-first
+      background: url("../svg/whyfrispes/01.svg") 1% 10% no-repeat
+    &-second
+      background: url("../svg/whyfrispes/02.svg") 1% 10% no-repeat
+    &-third
+      background: url("../svg/whyfrispes/03.svg") 1% 10% no-repeat
+    &-fourth
+      background: url("../svg/whyfrispes/04.svg") 1% 10% no-repeat
+    &-fifth
+      background: url("../svg/whyfrispes/05.svg") 1% 10% no-repeat
+    &-sixth
+      background: url("../svg/whyfrispes/06.svg") 1% 10% no-repeat
+  &__column
+    margin: 0 0 0 50px
+    height: 75px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  &__number
+    font-family: Lora, sans-serif
+    font-weight: 400
+    font-size: 32px
+    color: #10375C
+  &__explanation
+    font-weight: 400
+    font-size: 16px
+    color: #9A9A9A
+  &__body
+    display: flex
+    flex-direction: column
+    background: #10375C
+    color: white
+    padding: 54px
+    max-width: 540px
+  &__title
+    margin: 5px 0 0 0
+    color: white
+    font-size: 40px
+    line-height: 51.2px
+  &__subtitle
+    margin: 20px 0 0 0
+    font-weight: 500
+    font-size: 20px
+    line-height: 30px
+
+//
+
+// секция Facilities
+
+.facilities
+  max-width: 1110px
+  max-height: 649px
+  &__intro
+    &::after
+      left: 130px
+  &__title
+    margin: 5px 0 0 0
+    max-width: 570px
+    font-size: 40px
+    line-height: 51.2px
+  &__body
+    margin: 55px 0 0 0
+    display: flex
+    justify-content: space-between
+  &__list
+    max-width: 293px
+    max-height: 360px
+  &__link
+    display: flex
+    flex-direction: column
+    li
+      font-weight: 700
+      font-size: 20px
+      line-height: 24px
+    a
+      display: inline-block
+      padding: 24px
+      width: 293px
+      height: 72px
+      color: #222831
+      transition: color 0.7s, background 0.7s
+      &:hover
+        color: #FFFFFF
+        background: #FF5722
+    &-active
+      background: #FF5722
+      a
+        color: white
+  &__img
+    max-width: 729px
+    max-height: 453px
+    img
+      width: 100%
+
+//
+
+//  секция Gallery
+
+.gallery
+  max-width: 1585px
+  max-height: 606px
+  position: relative
+  &__img
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    img
+      object-fit: contain
+  &__body
+    position: absolute
+    top: 0
+    right: 180px
+    max-width: 496px
+    max-height: 204px
+    display: flex
+    flex-direction: column
+    float: right
+  &__intro
+    &::after
+      left: 137px
+  &__title
+    margin: 5px 0 0 0
+    font-family: Lora, sans-serif
+    font-size: 40px
+    line-height: 51px
+//
+
+// секция Use-Frispes
+
+.use-frispes
+  max-width: 1175px
+  max-height: 225px
+  margin: 0 auto
+  display: flex
+  flex-direction: column
+  align-items: center
+  &__title
+    font-weight: 700
+    font-size: 40px
+  &__subtitle
+    margin: 20px 0 0 0
+    font-size: 18px
+    line-height: 28px
+  &__logos
+    margin: 46px 0 0 0
+  &__list
+    display: flex
+    align-items: center
+    li
+      padding: 5px 10px
+      margin: 0 0 0 10px
+//
+
+// секция Reviews
+
+.reviews
+  max-width: 1395px
+  max-height: 625px
+  display: flex
+  flex-direction: column
+  &__top
+    width: 1110px
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+  &__intro
+    &::after
+      top: 14px
+      left: 85px
+  &__title
+    margin: 5px 0 0 0
+    font-family: Lora, sans-serif
+    font-size: 40px
+    line-height: 51px
+    max-width: 399px
+    max-height: 102px
+  &__middle
+    margin: 50px 0 0 0
+    padding-left: 145px
+  &__user
+    display: flex
+    justify-content: space-between
+    gap: 0 30px
+    width: 1395px
+  &__bottom
+    margin: 37px 0 0 0
+    align-self: center
+    width: 120px
+    display: flex
+    align-items: center
+
+.user
+  &__container
+    width: 445px
+    height: 393px
+    background: #10375C
+    color: #FFFFFF
+    padding: 45px 40px 35px 40px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  &__comment
+    font-size: 16px
+    font-weight: 400
+    line-height: 26px
+  &__bottom
+    display: flex
+  &__info
+    max-width: 166px
+    margin: 0 0 0 15px
+    height: 58px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  &__name
+    font-weight: 700
+    font-size: 18px
+    line-height: 28px
+  &__job-name
+    font-weight: 400
+    font-size: 16px
+    line-height: 26px
+//
+
+// секция FAQ
+
+.faq
+  max-width: 1120px
+  max-height: 423px
+  display: flex
+  flex-direction: column
+  align-items: center
+  &__title
+    font-size: 40px
+    line-height: 51.2px
+    max-width: 578px
+  &__cards
+    margin: 32px 0 0 0
+    display: flex
+    justify-content: space-between
+    height: 206px
+    max-width: 1120px
+    gap: 0 30px
+
+  &__card
+    position: relative
+    height: 200px
+  &__body
+    background: #FFFFFF
+    color: #222831
+    max-width: 350px
+    max-height: 171px
+    text-align: center
+    &-white
+      box-shadow: 0px -4px 50px rgba(223, 223, 223, 0.5)
+    &-orange
+      background: #FF5722
+      color: #FFFFFF
+  &__question
+    font-family: Lora, sans-serif
+    font-weight: 400
+    font-size: 26px
+    line-height: 33px
+    padding: 42px 40px 63px 40px
+  &__btn
+    width: 64px
+    height: 48px
+    background: #FF5722
+    position: absolute
+    bottom: 5px
+    left: 148px
+    z-index: 1
+    box-shadow: -5px 0 10px rgba(223, 223, 223, 0.7)
+    display: flex
+    justify-content: center
+    align-items: center
+    &-white
+      background: #FFFFFF
+      box-shadow: -5px 0 10px rgba(221, 44, 0, 0.24)
+  &__bottom
+    margin: 44px 0 0 0
+//
+
+//  секция News
+
+.news
+  &__background
+    background: #f8f8f8
+  &__top
+    padding: 60px 0 0 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__title
+    font-size: 40px
+    line-height: 51px
+  &__middle
+    margin: 50px 0 0 0
+    padding: 0 0 112px 0
+  &__blocks
+    display: flex
+    justify-content: space-between
+    gap: 30px 20px
+    //max-width: 1110px
+    //max-height: 670px
+    flex-wrap: wrap
+  &__primaryblock
+    display: flex
+
+
+.block
+  max-width: 350px
+  max-height: 320px
+  display: flex
+  flex-direction: column
+  &-primary
+    max-width: 380px
+  img
+    width: 100%
+  &__body
+    padding: 32px
+    display: flex
+    flex-direction: column
+    height: 100%
+    background: #FFFFFF
+    &-secondary
+      padding: 14px 16px 16px 16px
+      background: #FFFFFF
+    &-shadow
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15)
+  &__title
+    font-size: 32px
+    line-height: 41px
+    max-width: 315px
+  &__subtitle
+    margin: 20px 0 0 0
+    font-size: 16px
+    font-weight: 400
+    line-height: 26px
+    flex: 1 1 auto
+  &__news-name
+    font-family: Lora, sans-serif
+    font-size: 22px
+    font-weight: 400
+    line-height: 28px
+    color: #222831
+  &__news-author
+    margin: 4px 0 0 0
+    font-size: 16px
+    font-weight: 400
+    line-height: 26px
+//
+
+//  секция Footer
+
+.footer
+  max-width: 1110px
+  height: 250px
+  padding: 56px 0 102px 0
+  display: flex
+  justify-content: space-between
+  &__background
+    max-width: 1440px
+    height: 408px
+    background-color: #10375C
+  &__about
+    max-width: 255px
+    height: 235px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    color: #FFFFFF
+  &__title
+    font-family: Lora, sans-serif
+    font-size: 52px
+    font-weight: 700
+    line-height: 67px
+  &__subtitle
+    font-size: 16px
+    font-weight: 400
+    line-height: 26px
+  &__icons
+    width: 104px
+    height: 24px
+    display: flex
+    justify-content: space-between
+  &__icon
+    width: 24px
+    transition: background 0.5s
+  &__instagram
+    background: url("/svg/footer/test.svg") no-repeat 2px 2px
+    &:hover
+      background: url("/svg/footer/01-orange.svg") no-repeat 2px 2px
+  &__youtube
+    background: url("/svg/footer/02.svg")
+    &:hover
+      background: url("/svg/footer/02-orange.svg") no-repeat
+  &__facebook
+    background: url("/svg/footer/03.svg")
+  &__content
+    display: flex
+    max-width: 730px
+    height: 220px
+    justify-content: space-between
+  &__column
+    display: flex
+    flex-direction: column
+    margin: 0 0 0 68px
+    &-first
+      margin: 0
+  &__theme
+    font-size: 20px
+    font-weight: 500
+    line-height: 30px
+    color: #FFFFFF
+    opacity: 0.5
+  &__list
+    margin: 32px 0 0 0
+    li
+      margin: 0 0 7px 0
+      &:last-child
+        margin: 0
+    a
+      color: #FFFFFF
+      font-size: 16px
+      font-weight: 400
+      line-height: 26px
+      transition: color 0.5s
+      &:hover
+        color: #FF5722
+    &-last
+      max-width: 212px
+
+//
